@@ -92,3 +92,10 @@ cmake --build .
 ```
 
 <img src="./docs/img/cmake-build.gif" width="800px">
+
+---
+
+## References
+
+- **SFML documentation**: https://www.sfml-dev.org/documentation/2.6.0/
+- **ImGui documentation**: https://imgui-test.readthedocs.io/en/latest/
