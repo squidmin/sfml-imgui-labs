@@ -1,11 +1,14 @@
+add_executable(geometry geometry.cpp ./tilemap/Tile.cpp ./tilemap/Canvas.cpp ./tilemap/Grid.cpp)
+target_link_libraries(geometry PRIVATE ImGui-SFML::ImGui-SFML)
+
+add_executable(sort_colors sort_colors.cpp)
+target_link_libraries(sort_colors PRIVATE ImGui-SFML::ImGui-SFML)
+
 add_executable(square_grid_1 square_grid_1.cpp)
 target_link_libraries(square_grid_1 PRIVATE ImGui-SFML::ImGui-SFML)
 
 add_executable(square_grid_2 square_grid_2.cpp)
 target_link_libraries(square_grid_2 PRIVATE ImGui-SFML::ImGui-SFML)
-
-add_executable(geometry geometry.cpp ./tilemap/Tile.cpp ./tilemap/Canvas.cpp ./tilemap/Grid.cpp)
-target_link_libraries(geometry PRIVATE ImGui-SFML::ImGui-SFML)
 
 # Copy DLLs needed for runtime on Windows
 # if(WIN32)
