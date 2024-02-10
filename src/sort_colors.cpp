@@ -29,8 +29,8 @@ void drawTriplets(sf::RenderWindow &window, const std::vector<ColorTriplet> &tri
 }
 
 int dominantColor(const ColorTriplet &c) {
-    if (c.r >= c.g && c.r >= c.b) return 0; // Red is dominant
-    if (c.g >= c.r && c.g >= c.b) return 1; // Green is dominant
+    if (c.r >= c.g && c.r >= c.b) { return 0; } // Red is dominant
+    if (c.g >= c.r && c.g >= c.b) { return 1; } // Green is dominant
     return 2; // Blue is dominant
 }
 
@@ -54,10 +54,10 @@ bool incrementalSortColors(std::vector<ColorTriplet> &colors, size_t &red, size_
 }
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Color Sorting Demo");
+    sf::RenderWindow window(sf::VideoMode(1600, 1200), "Color Sorting");
     ImGui::SFML::Init(window);
 
-    auto triplets = generateRandomTriplets(30);
+    auto triplets = generateRandomTriplets(700);
     bool sorting = false;
     size_t red = 0, green = 0, blue = triplets.size() - 1;
     int delay = 1000; // Delay in milliseconds
@@ -68,8 +68,9 @@ int main() {
         sf::Event event;
         while (window.pollEvent(event)) {
             ImGui::SFML::ProcessEvent(event);
-            if (event.type == sf::Event::Closed)
+            if (event.type == sf::Event::Closed) {
                 window.close();
+            }
         }
 
         ImGui::SFML::Update(window, deltaClock.restart());

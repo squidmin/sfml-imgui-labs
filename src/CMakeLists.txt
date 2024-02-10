@@ -1,5 +1,14 @@
+add_executable(balanced_sums balanced_sums.cpp)
+target_link_libraries(balanced_sums PRIVATE ImGui-SFML::ImGui-SFML)
+
+# add_executable(dfs dfs.cpp ImGuiHelper.cpp TreeHelper.cpp)
+# target_link_libraries(dfs PRIVATE ImGui-SFML::ImGui-SFML)
+
 add_executable(geometry geometry.cpp ./tilemap/Tile.cpp ./tilemap/Canvas.cpp ./tilemap/Grid.cpp)
 target_link_libraries(geometry PRIVATE ImGui-SFML::ImGui-SFML)
+
+add_executable(physics_example physics_example.cpp GravityModule.cpp Sphere.cpp)
+target_link_libraries(physics_example PRIVATE ImGui-SFML::ImGui-SFML)
 
 add_executable(sort_colors sort_colors.cpp)
 target_link_libraries(sort_colors PRIVATE ImGui-SFML::ImGui-SFML)
