@@ -4,6 +4,9 @@ target_link_libraries(balanced_sums PRIVATE ImGui-SFML::ImGui-SFML)
 # add_executable(dfs dfs.cpp ImGuiHelper.cpp TreeHelper.cpp)
 # target_link_libraries(dfs PRIVATE ImGui-SFML::ImGui-SFML)
 
+add_executable(consistent_hashing consistent_hashing.cpp)
+target_link_libraries(consistent_hashing PRIVATE ImGui-SFML::ImGui-SFML)
+
 add_executable(geometry geometry.cpp ./tilemap/Tile.cpp ./tilemap/Canvas.cpp ./tilemap/Grid.cpp)
 target_link_libraries(geometry PRIVATE ImGui-SFML::ImGui-SFML)
 
